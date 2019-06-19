@@ -8,8 +8,16 @@ final public class Instructors extends People<Instructor> {
 
     @Override
     Instructor[] toArray() {
-        return INSTANCE.toArray();
+        Instructor[] arr = new Instructor[INSTANCE.count()];
+        int i = 0;
+        for (Object student: INSTANCE
+        ) {
+            arr[i] = (Instructor) student;
+            i++;
+        }
+        return arr;
     }
+
 
     public static Instructors getInstance (){
         if(INSTANCE == null){

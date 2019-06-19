@@ -23,6 +23,14 @@ final public class Students extends People<Student> {
 
     @Override
     Student[] toArray() {
-        return INSTANCE.toArray();
+        Student[] arr = new Student[INSTANCE.count()];
+        int i = 0;
+        for (Object student: INSTANCE
+        ) {
+            arr[i] = (Student) student;
+            i++;
+        }
+        return arr;
     }
 }
+
