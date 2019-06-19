@@ -23,5 +23,19 @@ public class ZipCodeWilmingtonTest {
         assertEquals(expected,acutal);
     }
 
+    @Test
+    public void hostLecture2() {
+        ZipCodeWilmington zipCodeWilmington = ZipCodeWilmington.getInstance();
+        Students students = Students.getInstance();
+
+        Learner learner = (Learner)students.findById(0l);
+
+        zipCodeWilmington.hostLecture(Educator.Wilhlem, 70.0);
+
+        Double acutal = learner.getTotalStudyTime();
+        Double expected = 10.0;
+
+        assertEquals(expected,acutal);
+    }
 
 }
