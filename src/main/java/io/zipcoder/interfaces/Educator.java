@@ -5,17 +5,17 @@ import java.util.Enumeration;
 public enum Educator implements Teacher  {
 
 
-    Dolio(new Instructor(0l, "Dolio")),
-    Kris(new Instructor(1l, "Kris")),
-    Sian(new Instructor(2l, "Sian")),
-    Wilhlem(new Instructor(3l, "Wilhem"))
+    Dolio(new Instructor(0l, "Dolio") , 0.0),
+    Kris(new Instructor(1l, "Kris"), 0.0),
+    Sian(new Instructor(2l, "Sian"), 0.0),
+    Wilhlem(new Instructor(3l, "Wilhem"), 0.0)
     ;
 
     Instructors instructors = Instructors.getInstance();
     private final Instructor instructor;
     double timeWorked;
 
-    Educator(Instructor instructor) {
+    Educator(Instructor instructor, double timeWorked ) {
         this.instructor = instructor;
         this.timeWorked = 0.0;
         instructors.add(instructor);

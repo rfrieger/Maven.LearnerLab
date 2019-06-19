@@ -12,6 +12,7 @@ public class EducatorTest {
         Educator educator = Educator.Wilhlem;
 
         Assert.assertTrue(educator instanceof Teacher);
+
     }
 
     @Test
